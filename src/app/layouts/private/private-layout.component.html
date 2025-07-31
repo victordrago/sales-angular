@@ -1,0 +1,15 @@
+<div class="min-h-screen bg-gray-100 text-gray-800">
+  <!-- Navbar -->
+  <nav class="bg-white shadow px-4 py-2 flex justify-between items-center">
+    <h1 class="text-xl font-bold text-blue-600">Panel Admin</h1>
+    <div>
+      <a routerLink="/dashboard" class="mr-4 hover:underline">Dashboard</a>
+      <a routerLink="/users" class="hover:underline">Usuarios</a>
+    </div>
+  </nav>
+
+  <!-- Contenido principal -->
+  <main class="p-6">
+    <router-outlet></router-outlet>
+  </main>
+</div>
