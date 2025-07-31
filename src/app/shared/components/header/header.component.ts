@@ -1,14 +1,23 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 
 @Component({
   selector: 'app-header',
   standalone: true,
+  imports: [ MatSlideToggleModule],
   templateUrl: './header.component.html',
 })
 export class HeaderComponent {
-  isMenuOpen = false;
+  @Output() toggleLeft = new EventEmitter<void>();
+  @Output() toggleRight = new EventEmitter<void>();
 
-  toggleMenu() {
-    this.isMenuOpen = !this.isMenuOpen;
-  }
+  toggleLeftClicked() {
+  console.log('toggleLeft clicked');
+  this.toggleLeft.emit();
+}
+
+toggleRightClicked() {
+  console.log('toggleRight clicked');
+  this.toggleRight.emit();
+}
 }
