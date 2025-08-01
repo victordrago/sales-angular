@@ -12,12 +12,10 @@ export class HeaderComponent {
   @Output() toggleRight = new EventEmitter<void>();
 
   toggleLeftClicked() {
-  console.log('toggleLeft clicked');
   this.toggleLeft.emit();
 }
 
 toggleRightClicked() {
-  console.log('toggleRight clicked');
   this.toggleRight.emit();
 }
 }

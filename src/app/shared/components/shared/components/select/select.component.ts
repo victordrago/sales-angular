@@ -6,8 +6,7 @@ export interface SelectOption<T> {
 }
 
 @Component({
-  // Cambia el selector aquí
-  selector: 'app-select', //  <-- ¡ARREGLADO!
+  selector: 'app-select', 
   standalone: true,
   templateUrl: './select.component.html',
   styleUrls: ['./select.component.scss']
