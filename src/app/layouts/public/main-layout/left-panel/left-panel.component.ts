@@ -4,8 +4,8 @@ import { SelectComponent } from '../../../../shared/components/shared/components
 @Component({
   selector: 'app-left-panel',
   standalone: true,
+  imports: [SelectComponent],
   templateUrl: './left-panel.component.html',
   styleUrls: ['./left-panel.component.scss'],
-  imports: [SelectComponent],
 })
 export class LeftPanelComponent {}
