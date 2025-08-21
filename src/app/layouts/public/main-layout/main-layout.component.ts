@@ -1,24 +1,27 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from '../../../shared/components/header/header.component';
 import { LeftPanelComponent } from './left-panel/left-panel.component';
 import { RightPanelComponent } from './right-panel/right-panel.component';
+import { CardComponent, CardData } from '../../../shared/components/card/card.component';
+import { searchResults } from '../../../services/mocks/cards';
 
 @Component({
   selector: 'app-main-layout',
   standalone: true,
   imports: [
-    RouterOutlet,
     HeaderComponent,
     LeftPanelComponent,
-    RightPanelComponent
+    RightPanelComponent, 
+    CardComponent, 
   ],
   templateUrl: './main-layout.component.html',
 })
 export class MainLayoutComponent {
   showLeftPanel = true;
   showRightPanel = false;
-
+  
+  searchResults: CardData[] = searchResults; // ✅
+ 
   toggleLeftPanel(): void {
     this.showLeftPanel = !this.showLeftPanel;
   }

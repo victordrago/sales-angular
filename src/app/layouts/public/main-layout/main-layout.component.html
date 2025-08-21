@@ -7,10 +7,14 @@
   
   <div class="flex flex-1 overflow-hidden">
     @if (showLeftPanel) {
-      <app-left-panel class="w-64 bg-white dark:bg-gray-800 border-r border-gray-200 dark:border-gray-700" />
+      <app-left-panel class="w-1/5 bg-blue-50 border-r border-gray-200" />
     }
     <main class="flex-1 p-6 overflow-y-auto">
-      <router-outlet></router-outlet>
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-6">
+        @for (item of searchResults; track item.title) {
+          <app-card [data]="item"></app-card>
+        }
+      </div>
     </main>
   </div>
 </div>
