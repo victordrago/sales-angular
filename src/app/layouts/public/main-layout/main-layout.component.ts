@@ -1,9 +1,8 @@
-// Fichero: src/app/layouts/main-layout/main-layout.component.ts
-
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from '../../../shared/components/header/header.component';
 import { LeftPanelComponent } from './left-panel/left-panel.component';
+import { RightPanelComponent } from './right-panel/right-panel.component';
 
 @Component({
   selector: 'app-main-layout',
@@ -11,14 +10,20 @@ import { LeftPanelComponent } from './left-panel/left-panel.component';
   imports: [
     RouterOutlet,
     HeaderComponent,
-    LeftPanelComponent
+    LeftPanelComponent,
+    RightPanelComponent
   ],
   templateUrl: './main-layout.component.html',
 })
 export class MainLayoutComponent {
-  showLeftPanel = false;
+  showLeftPanel = true;
+  showRightPanel = false;
 
-  toggleLeftPanel() {
+  toggleLeftPanel(): void {
     this.showLeftPanel = !this.showLeftPanel;
+  }
+
+  toggleRightPanel(): void {
+    this.showRightPanel = !this.showRightPanel;
   }
 }

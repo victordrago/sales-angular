@@ -11,7 +11,7 @@ export class HeaderComponent {
   @Output() toggleLeft = new EventEmitter<void>();
   @Output() toggleRight = new EventEmitter<void>();
 
-  toggleLeftClicked() {
+toggleLeftClicked() {
   this.toggleLeft.emit();
 }
 
