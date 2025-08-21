@@ -1,4 +1,4 @@
-import { CardData } from "../../shared/components/card/card.component"; // Asegúrate que la ruta sea correcta
+import { CardData } from "../../models/card.model";
 
 export const searchResults: CardData[] = [
   {

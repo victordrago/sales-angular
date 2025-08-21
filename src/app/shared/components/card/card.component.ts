@@ -1,11 +1,5 @@
 import { Component, Input } from '@angular/core';
-
-export interface CardData {
-  imageUrl: string;
-  title: string;
-  description: string;
-  tags: string[];
-}
+import { CardData } from '../../../models/card.model';
 
 @Component({
   selector: 'app-card',
