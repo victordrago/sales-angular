@@ -1,0 +1,12 @@
+// Podemos añadir transiciones más suaves a los inputs para complementar a Tailwind
+// O definir estilos globales para la página si es necesario.
+
+// Este SCSS añade una transición suave al borde y a la sombra de los inputs al enfocarlos
+input {
+    transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+// Un pequeño detalle para el botón
+button:disabled {
+    transition: none;
+}
